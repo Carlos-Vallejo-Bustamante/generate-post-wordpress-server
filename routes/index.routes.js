@@ -8,5 +8,6 @@ router.get("/", (req, res, next) => {
 
 router.use("/auth", require("./auth.routes"))
 router.use("/profile", validateToken, require("./profile.routes"))
+router.use("/create-post", require("./createPost.routes"))
 
 module.exports = router;
